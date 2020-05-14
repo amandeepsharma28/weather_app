@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather Report</title>
+        <style>
+            body{
+                background-image: url("images/weather.jpg");
+            }
+            #forecast h2{
+                background-color: white;
+            }
+            .model{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section id="report">
+                <h1>Weather Report</h1>                
+                <select id="city">
+                    <option value="select">---Select--</option>
+                    <option value="Montreal,CA">Montreal,CA</option>
+                    <option value="Toronto,CA">Toronto,CA</option>
+                    <option value="Vancouver,CA">Vancouver,CA</option>
+                    <option value="London,UK">London,UK</option>
+                    <option value="Manchester,UK">Manchester,UK</option>
+                </select>
+                <select id="temp">
+                    <option value="f">&deg;F</option>
+                    <option value="c">&deg;C</option>
+                </select><br><br>
+                <button type="button" id="forecastButton">search</button>
+            </section>
+            <section id="current">
+                <h2>Current Weather</h2>
+                <p class="temperature">Temperature: <span class="val"></span></p>
+                <p class="description">Sky: <span class="val"></span></p>
+                <p class="icon"><img src="" alt="" class="val" /></p>
+            </section>
+            <section id="forecast">
+                <h2>Weather Forecast</h2>
+                <div id="data_panel">
+                    <table id="tb_forecast">
+                        <thead>
+                            <tr><th>Hour</th>
+                            <th>Temp</th>
+                            <th>Icon</th>
+                            <th>Desc.</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="model">
+                                <td class="hour"></td>
+                                <td class="temperature"></td>
+                                <td class="icon"><img src="" alt="" /></td>
+                                <td class="description"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <script src="script/main.js"></script>
+    </body>
+</html>
